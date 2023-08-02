@@ -1,5 +1,5 @@
 
-export const getBusinesses = async () => {
+export const getBusinesses = async (searchString = "a*") => {
     console.log('getBusinesses')
     var myHeaders = new Headers();
     myHeaders.append("authority", "bsd.sos.mo.gov");
@@ -32,7 +32,7 @@ export const getBusinesses = async () => {
     urlencoded.append("ctl00_ctl00_AdditionalQuickLinksLeftMenu_ClientState", "");
     urlencoded.append("ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderMainSingle$ppBESearch$bsPanel$ddlBESearchType", "0");
     urlencoded.append("ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderMainSingle$ppBESearch$bsPanel$hfSelectedBESearchType", "0");
-    urlencoded.append("ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderMainSingle$ppBESearch$bsPanel$tbBusinessName", "a*");
+    urlencoded.append("ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderMainSingle$ppBESearch$bsPanel$tbBusinessName", searchString);
     urlencoded.append("ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderMainSingle$ppBESearch$bsPanel$ddlNameSearchMethod", "0");
     urlencoded.append("ctl00$ctl00$ContentPlaceHolderMain$ContentPlaceHolderMainSingle$ppBESearch$hdnBusinessEntitySearchControlID", "ctl00_ctl00_ContentPlaceHolderMain_ContentPlaceHolderMainSingle_ppBESearch_bsPanel_stdbtnSearch_LinkStandardButton");
 
